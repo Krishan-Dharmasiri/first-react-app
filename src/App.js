@@ -19,7 +19,7 @@ class App extends React.Component {
     };
   }
 
-   componentDidMount() {
+  componentDidMount() {
     authenticationService.currentUser.subscribe(x => this.setState({ currentUser: x }));
   }
 
@@ -35,17 +35,10 @@ class App extends React.Component {
       <Router>
           <div>
               {currentUser &&
-                  <Route path="/" component={HomePage} />
+                <Route path="/" component={HomePage} />
               }              
-              <div className="container">
-                  <div className="row">
-                      <div className="col-md-6 offset-md-3"> 
-                          <Route path="/login" component={LoginPage} />
-                      </div>
-                  </div>
-              </div>
-              
-          </div>
+              <h3>Welcome to SATURN</h3>              
+          </div>          
       </Router>    
     );
   }  
